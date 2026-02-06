@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - InteriorHuts</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,6 +17,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="consultation-btn" onclick="window.location.href='contact.html'">Book Consultation</button>
@@ -44,82 +45,28 @@
 
             <!-- Featured Projects -->
             <div class="featured-projects">
-                <div class="project-card" data-category="residential" onclick="openProjectModal('mumbai-residence')">
-                    <div class="project-image residential-project"></div>
-                    <div class="project-info">
-                        <h3>Mumbai Luxury Residence</h3>
-                        <p class="project-location">Bandra, Mumbai</p>
-                        <p class="project-type">Residential • 3500 sq ft</p>
-                        <div class="project-details">
-                            <span class="project-year">2023</span>
-                            <span class="project-budget">₹25 Lakhs</span>
-                        </div>
-                    </div>
+                <div class="project-card" data-category="residential">
+                    <div class="project-image" style="background: url('../Work/13.jpeg') center/cover;" onclick="openImageModal('../Work/13.jpeg')"></div>
                 </div>
 
-                <div class="project-card" data-category="commercial" onclick="openProjectModal('tech-office')">
-                    <div class="project-image commercial-project"></div>
-                    <div class="project-info">
-                        <h3>Tech Startup Office</h3>
-                        <p class="project-location">Gurgaon, Delhi</p>
-                        <p class="project-type">Commercial • 5000 sq ft</p>
-                        <div class="project-details">
-                            <span class="project-year">2023</span>
-                            <span class="project-budget">₹35 Lakhs</span>
-                        </div>
-                    </div>
+                <div class="project-card" data-category="commercial">
+                    <div class="project-image" style="background: url('../Work/14.jpeg') center/cover;" onclick="openImageModal('../Work/14.jpeg')"></div>
                 </div>
 
-                <div class="project-card" data-category="villa" onclick="openProjectModal('goa-villa')">
-                    <div class="project-image villa-project"></div>
-                    <div class="project-info">
-                        <h3>Beachfront Villa</h3>
-                        <p class="project-location">North Goa</p>
-                        <p class="project-type">Villa • 6000 sq ft</p>
-                        <div class="project-details">
-                            <span class="project-year">2022</span>
-                            <span class="project-budget">₹45 Lakhs</span>
-                        </div>
-                    </div>
+                <div class="project-card" data-category="villa">
+                    <div class="project-image" style="background: url('../Work/15.jpeg') center/cover;" onclick="openImageModal('../Work/15.jpeg')"></div>
                 </div>
 
-                <div class="project-card" data-category="kitchen" onclick="openProjectModal('modern-kitchen')">
-                    <div class="project-image kitchen-project"></div>
-                    <div class="project-info">
-                        <h3>Modern Modular Kitchen</h3>
-                        <p class="project-location">Bangalore</p>
-                        <p class="project-type">Kitchen • 400 sq ft</p>
-                        <div class="project-details">
-                            <span class="project-year">2023</span>
-                            <span class="project-budget">₹8 Lakhs</span>
-                        </div>
-                    </div>
+                <div class="project-card" data-category="kitchen">
+                    <div class="project-image" style="background: url('../Work/16.jpeg') center/cover;" onclick="openImageModal('../Work/16.jpeg')"></div>
                 </div>
 
-                <div class="project-card" data-category="residential" onclick="openProjectModal('penthouse')">
-                    <div class="project-image penthouse-project"></div>
-                    <div class="project-info">
-                        <h3>Luxury Penthouse</h3>
-                        <p class="project-location">Worli, Mumbai</p>
-                        <p class="project-type">Residential • 4500 sq ft</p>
-                        <div class="project-details">
-                            <span class="project-year">2022</span>
-                            <span class="project-budget">₹55 Lakhs</span>
-                        </div>
-                    </div>
+                <div class="project-card" data-category="residential">
+                    <div class="project-image" style="background: url('../Work/17.jpeg') center/cover;" onclick="openImageModal('../Work/17.jpeg')"></div>
                 </div>
 
-                <div class="project-card" data-category="commercial" onclick="openProjectModal('boutique')">
-                    <div class="project-image boutique-project"></div>
-                    <div class="project-info">
-                        <h3>Designer Boutique</h3>
-                        <p class="project-location">Khan Market, Delhi</p>
-                        <p class="project-type">Retail • 1200 sq ft</p>
-                        <div class="project-details">
-                            <span class="project-year">2023</span>
-                            <span class="project-budget">₹18 Lakhs</span>
-                        </div>
-                    </div>
+                <div class="project-card" data-category="residential">
+                    <div class="project-image" style="background: url('../Work/1.jpeg') center/cover;" onclick="openImageModal('../Work/1.jpeg')"></div>
                 </div>
             </div>
         </div>
@@ -168,11 +115,6 @@
                     <a href="portfolio.html">Portfolio</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Pinterest</a>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; InteriorHuts – Crafting Luxury Spaces</p>
@@ -180,6 +122,19 @@
         </div>
     </footer>
 
-    <script src="enhanced-script.js"></script>
+    <script src="js/enhanced-script.js"></script>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-image" id="modalImg">
+    </div>
+    
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/918826888461?text=Hi%20InteriorHuts,%20I%20want%20to%20discuss%20a%20project" class="whatsapp-btn" target="_blank">
+            💬
+        </a>
+    </div>
 </body>
 </html>

@@ -237,6 +237,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const successModal = document.getElementById('successModal');
             if (successModal) {
                 successModal.style.display = 'block';
+                successModal.querySelector('.modal-content').style.animation = 'slideInDown 0.5s ease';
+                
+                // Auto-hide after 3 seconds
+                setTimeout(() => {
+                    successModal.querySelector('.modal-content').style.animation = 'slideOutUp 0.5s ease';
+                    setTimeout(() => {
+                        successModal.style.display = 'none';
+                    }, 500);
+                }, 3000);
             } else {
                 alert('Thank you for your inquiry! We will contact you soon.');
             }
@@ -358,4 +367,126 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     });
+});
+
+
+// Background Image Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-background-slider .slide');
+
+if (slides.length > 0) {
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000);
+}
+
+// Scroll Progress Bar
+const progressBar = document.createElement('div');
+progressBar.className = 'scroll-progress';
+document.body.prepend(progressBar);
+
+window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+});
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.service-card, .portfolio-item, .process-step, .testimonial-card');
+
+const revealOnScroll = () => {
+    revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+
+// Image Modal Functions
+function openImageModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    
+    if (modal && modalImg) {
+        modal.style.display = 'block';
+        modalImg.src = imageSrc;
+    }
+}
+
+// Close modal when clicking X or outside image
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('imageModal');
+    if (e.target.classList.contains('close-modal') || e.target.classList.contains('image-modal')) {
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('imageModal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+});
+
+
+// Welcome Modal - Show on page load
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        const welcomeModal = document.getElementById('welcomeModal');
+        if (welcomeModal && !sessionStorage.getItem('welcomeShown')) {
+            welcomeModal.style.display = 'block';
+        }
+    }, 2000);
+});
+
+// Close Welcome Modal
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('close-welcome')) {
+        document.getElementById('welcomeModal').style.display = 'none';
+        sessionStorage.setItem('welcomeShown', 'true');
+    }
+});
+
+// Welcome Form Submit
+const welcomeForm = document.getElementById('welcomeForm');
+if (welcomeForm) {
+    welcomeForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Hide welcome modal
+        document.getElementById('welcomeModal').style.display = 'none';
+        sessionStorage.setItem('welcomeShown', 'true');
+        
+        // Show thank you modal
+        document.getElementById('thankYouModal').style.display = 'block';
+        
+        // Reset form
+        this.reset();
+    });
+}
+
+// Close Thank You Modal
+function closeThankYou() {
+    document.getElementById('thankYouModal').style.display = 'none';
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('close-thankyou')) {
+        closeThankYou();
+    }
 });

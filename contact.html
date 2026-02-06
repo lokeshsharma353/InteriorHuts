@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - InteriorHuts</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,6 +17,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
             <button class="consultation-btn active-btn">Book Consultation</button>
@@ -224,10 +225,10 @@
     <!-- Success Modal -->
     <div id="successModal" class="modal">
         <div class="modal-content success-modal">
-            <div class="success-icon">✅</div>
+            <div class="success-icon">✓</div>
             <h2>Thank You!</h2>
-            <p>Your inquiry has been submitted successfully. Our team will contact you within 24 hours.</p>
-            <button class="btn-primary" onclick="closeModal('successModal')">Close</button>
+            <p>Your inquiry has been submitted successfully.<br>Our team will contact you within 24 hours.</p>
+            <div class="auto-close-info">This will close automatically in 3 seconds...</div>
         </div>
     </div>
 
@@ -246,11 +247,6 @@
                     <a href="portfolio.html">Portfolio</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Pinterest</a>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; InteriorHuts – Crafting Luxury Spaces</p>
@@ -258,6 +254,13 @@
         </div>
     </footer>
 
-    <script src="enhanced-script.js"></script>
+    <script src="js/enhanced-script.js"></script>
+    
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/918826888461?text=Hi%20InteriorHuts,%20I%20want%20to%20book%20a%20consultation" class="whatsapp-btn" target="_blank">
+            💬
+        </a>
+    </div>
 </body>
 </html>

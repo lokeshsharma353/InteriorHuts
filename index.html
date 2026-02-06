@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InteriorHuts - Designing Spaces That Define Luxury</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,6 +17,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="consultation-btn" onclick="window.location.href='contact.html'">Book Consultation</button>
@@ -25,15 +26,19 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background-slider">
+            <div class="slide active" style="background: url('images/sofa.jpg') center/cover;"></div>
+            <div class="slide" style="background: url('images/bedroom.jpg') center/cover;"></div>
+            <div class="slide" style="background: url('images/home.jpg') center/cover;"></div>
+        </div>
         <div class="hero-content">
-            <h1 class="hero-title">Designing Spaces That Define Luxury</h1>
-            <p class="hero-subtitle">Modern. Timeless. InteriorHuts.</p>
+            <h1 class="hero-title animate-text">Designing Spaces That Define Luxury</h1>
+            <p class="hero-subtitle animate-text">Modern. Timeless. InteriorHuts.</p>
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="window.location.href='contact.html'">Book a Consultation</button>
-                <button class="btn-secondary" onclick="window.location.href='portfolio.html'">View Our Work</button>
+                <button class="btn-primary animate-btn" onclick="window.location.href='contact.html'">Book a Consultation</button>
+                <button class="btn-secondary animate-btn" onclick="window.location.href='portfolio.html'">View Our Work</button>
             </div>
         </div>
-        <div class="hero-image"></div>
     </section>
 
     <!-- About Section -->
@@ -114,53 +119,50 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="home">
-                    <div class="portfolio-image" style="background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Modern Residence</h3>
-                        <p>Mumbai • Residential</p>
-                    </div>
+                    <div class="portfolio-image" style="background: url('Work/1.jpeg') center/cover;" onclick="openImageModal('Work/1.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="home">
+                    <div class="portfolio-image" style="background: url('Work/2.jpeg') center/cover;" onclick="openImageModal('Work/2.jpeg')"></div>
                 </div>
                 <div class="portfolio-item" data-category="office">
-                    <div class="portfolio-image" style="background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80') center/cover;"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Corporate Office</h3>
-                        <p>Delhi • Commercial</p>
-                    </div>
+                    <div class="portfolio-image" style="background: url('Work/3.jpeg') center/cover;" onclick="openImageModal('Work/3.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="home">
+                    <div class="portfolio-image" style="background: url('Work/4.jpeg') center/cover;" onclick="openImageModal('Work/4.jpeg')"></div>
                 </div>
                 <div class="portfolio-item" data-category="villa">
-                    <div class="portfolio-image" style="background: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80') center/cover;"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Luxury Villa</h3>
-                        <p>Goa • Villa</p>
-                    </div>
+                    <div class="portfolio-image" style="background: url('Work/5.jpeg') center/cover;" onclick="openImageModal('Work/5.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="home">
+                    <div class="portfolio-image" style="background: url('Work/6.jpeg') center/cover;" onclick="openImageModal('Work/6.jpeg')"></div>
                 </div>
                 <div class="portfolio-item" data-category="retail">
-                    <div class="portfolio-image" style="background: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;"></div>
-                    <div class="portfolio-overlay">
-                        <h3>Boutique Store</h3>
-                        <p>Bangalore • Retail</p>
-                    </div>
+                    <div class="portfolio-image" style="background: url('Work/7.jpeg') center/cover;" onclick="openImageModal('Work/7.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="office">
+                    <div class="portfolio-image" style="background: url('Work/8.jpeg') center/cover;" onclick="openImageModal('Work/8.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="home">
+                    <div class="portfolio-image" style="background: url('Work/9.jpeg') center/cover;" onclick="openImageModal('Work/9.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="villa">
+                    <div class="portfolio-image" style="background: url('Work/10.jpeg') center/cover;" onclick="openImageModal('Work/10.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="home">
+                    <div class="portfolio-image" style="background: url('Work/11.jpeg') center/cover;" onclick="openImageModal('Work/11.jpeg')"></div>
+                </div>
+                <div class="portfolio-item" data-category="office">
+                    <div class="portfolio-image" style="background: url('Work/12.jpeg') center/cover;" onclick="openImageModal('Work/12.jpeg')"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Client Testimonials</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"InteriorHuts transformed our home into a masterpiece. Their attention to detail and luxury aesthetic exceeded our expectations."</p>
-                    <div class="client-info">
-                        <strong>Priya Sharma</strong>
-                        <span>Mumbai Residence</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-image" id="modalImg">
+    </div>
 
     <!-- Design Process Section -->
     <section class="process">
@@ -274,11 +276,6 @@
                     <a href="portfolio.html">Portfolio</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Pinterest</a>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; InteriorHuts – Crafting Luxury Spaces</p>
@@ -288,9 +285,52 @@
 
     <!-- Floating Contact Button -->
     <div class="floating-contact">
-        <button class="talk-to-designer">Talk to Designer</button>
+        <button class="talk-to-designer" onclick="window.location.href='contact.html'">Talk to Designer</button>
     </div>
 
-    <script src="enhanced-script.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/918826888461?text=Hi%20InteriorHuts,%20I'm%20interested%20in%20your%20interior%20design%20services" class="whatsapp-btn" target="_blank">
+            💬
+        </a>
+    </div>
+
+    <script src="js/enhanced-script.js"></script>
+    
+    <!-- Welcome Contact Modal -->
+    <div id="welcomeModal" class="welcome-modal">
+        <div class="welcome-modal-content">
+            <span class="close-welcome">&times;</span>
+            <div class="welcome-icon">🏠</div>
+            <h2>Transform Your Space</h2>
+            <p>Get a <strong>FREE Consultation</strong> & Design Quote</p>
+            <form id="welcomeForm" class="welcome-form">
+                <div class="form-row-welcome">
+                    <input type="text" name="name" placeholder="👤 Your Name" required>
+                    <input type="tel" name="phone" placeholder="📞 Phone Number" required>
+                </div>
+                <input type="email" name="email" placeholder="📧 Email Address" required>
+                <select name="interest" required>
+                    <option value="">🎯 What are you looking for?</option>
+                    <option value="residential">🏡 Residential Interior</option>
+                    <option value="commercial">🏢 Commercial Design</option>
+                    <option value="kitchen">🍳 Modular Kitchen</option>
+                    <option value="villa">🏰 Luxury Villa</option>
+                    <option value="consultation">💬 Free Consultation</option>
+                </select>
+                <button type="submit" class="btn-submit-welcome">Get Free Consultation →</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-content">
+            <div class="success-animation">✓</div>
+            <h2>Thank You!</h2>
+            <p>We've received your details successfully.</p>
+            <p class="contact-info">Our team will contact you within 24 hours.</p>
+        </div>
+    </div>
 </body>
 </html>
