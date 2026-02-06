@@ -106,11 +106,22 @@ h1, h2, h3 {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: none;
 }
 
 .consultation-btn:hover {
     background: #f0f0f0;
     transform: translateY(-2px);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 /* Hero Section */
@@ -567,27 +578,7 @@ h1, h2, h3 {
 
 /* Floating Contact Button */
 .floating-contact {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 1000;
-}
-
-.talk-to-designer {
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 1rem 1.5rem;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 50px;
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.talk-to-designer:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+    display: none;
 }
 
 /* Responsive Design */
@@ -1420,6 +1411,7 @@ h1, h2, h3 {
     
     .nav-container {
         padding: 0 15px;
+        position: relative;
     }
     
     .logo {
@@ -1427,13 +1419,41 @@ h1, h2, h3 {
     }
     
     .nav-menu {
-        display: none !important;
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        padding: 1rem 0;
+        z-index: 999;
     }
     
-    .consultation-btn {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.85rem;
-        white-space: nowrap;
+    .nav-menu.active {
+        display: flex !important;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #333;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        line-height: 1;
     }
     
     .hero {
@@ -1509,6 +1529,11 @@ h1, h2, h3 {
         height: 250px;
     }
     
+    .portfolio-image {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
     .portfolio-overlay h3 {
         font-size: 1.1rem !important;
     }
@@ -1533,16 +1558,6 @@ h1, h2, h3 {
         display: none;
     }
     
-    .floating-contact {
-        bottom: 90px;
-        right: 1rem;
-    }
-    
-    .talk-to-designer {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    
     .whatsapp-float {
         bottom: 20px;
         right: 1rem;
@@ -1561,6 +1576,8 @@ h1, h2, h3 {
     .leader-photo {
         width: 150px;
         height: 150px;
+        background-size: cover !important;
+        background-position: center !important;
     }
     
     .social-links-leader a {
@@ -1598,6 +1615,11 @@ h1, h2, h3 {
     .welcome-form select {
         padding: 0.9rem;
         font-size: 1rem;
+    }
+    
+    .project-image {
+        background-size: cover !important;
+        background-position: center !important;
     }
 }
 
@@ -1645,11 +1667,6 @@ h1, h2, h3 {
         width: 50px;
         height: 50px;
         font-size: 1.6rem;
-    }
-    
-    .talk-to-designer {
-        padding: 0.7rem 1rem;
-        font-size: 0.85rem;
     }
     
     .method-btn,

@@ -1,3 +1,21 @@
+// Mobile menu functionality
+window.toggleMobileMenu = function() {
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+        navMenu.classList.toggle('active');
+    }
+};
+
+// Close mobile menu when clicking on a link
+document.addEventListener('click', function(e) {
+    if (e.target.matches('.nav-menu a')) {
+        const navMenu = document.getElementById('navMenu');
+        if (navMenu) {
+            navMenu.classList.remove('active');
+        }
+    }
+});
+
 // Enhanced JavaScript with multi-page functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Animated counters
