@@ -1437,7 +1437,7 @@ h1, h2, h3 {
     
     .nav-menu {
         display: none;
-        position: fixed;
+        position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
@@ -1547,7 +1547,7 @@ h1, h2, h3 {
     }
     
     .portfolio-item {
-        height: 250px;
+        height: 200px;
     }
     
     .portfolio-image {
@@ -2633,11 +2633,43 @@ body {
     
     .viz-item,
     .gallery-item {
-        height: 250px;
+        height: 200px;
     }
     
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .load-more-btn {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto;
+        padding: 1rem 2rem;
+        background: #fff;
+        color: #000;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .load-more-btn:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+    }
+    
+    .gallery-grid .gallery-item:nth-child(n+7),
+    .viz-grid .viz-item:nth-child(n+4),
+    .featured-projects .project-card:nth-child(n+7) {
+        display: none;
+    }
+    
+    .gallery-grid.show-all .gallery-item,
+    .viz-grid.show-all .viz-item,
+    .featured-projects.show-all .project-card {
+        display: block;
     }
 }
 

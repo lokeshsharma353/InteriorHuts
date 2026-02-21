@@ -523,3 +523,15 @@ document.addEventListener('click', function(e) {
         closeThankYou();
     }
 });
+
+
+// Load More Function for Mobile
+function loadMore(button) {
+    const category = button.closest('.viz-category');
+    const grid = category.querySelector('.gallery-grid, .viz-grid, .featured-projects');
+    
+    if (grid) {
+        grid.classList.add('show-all');
+        button.style.display = 'none';
+    }
+}
